@@ -1,5 +1,5 @@
 #!/bin/bash
-START=`date -u +%s.%N`
+START=$(date -u +%s.%N)
 
 BLINK='\033[5m'
 IRED='\033[0;91m'
@@ -11,7 +11,7 @@ NoColor='\033[0m' # No Color
 
 "$@"
 
-STOP=`date -u +%s.%N`
+STOP=$(date -u +%s.%N)
 echo -e -n "Run time: ${IYELLOW}"
 #date -u -d "0 $STOP sec - $START sec" +"%H:%M:%S.%N (HH:MM:SS)"
 #date -u -d "0 $STOP sec - $START sec" +"%H:%M:%S.%N" | xargs echo -n
